@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.Scanner;
+
+
+class test{
+    public static void main(String args[]) throws IOException{
+        int a;
+        int b;
+        Scanner in = new Scanner(System.in);
+        a = in.nextInt();
+        b = in.nextInt();
+        System.out.printf("Dodawanie: %d + %d = %d\n",a,b,a+b);
+        System.out.printf("Odejmowanie: %d - %d = %d\n",a,b,a-b);
+        System.out.printf("Mnożenie: %d * %d = %d\n",a,b,a*b);
+        System.out.printf("Dzielenie modulo: %d mod %d = %d\n",a,b,a%b);
+    }
+}
