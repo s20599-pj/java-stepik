@@ -1,0 +1,23 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+class main {
+    public static void main(String args[]) throws IOException {
+        Scanner in = new Scanner(System.in);
+        char[] slowo = new char[100];
+        String input;
+
+        input = in.next();
+        slowo = input.toCharArray();
+
+        int licznik=slowo.length-1;
+        int nie=0;
+        for(int i=0;i<licznik/2;i++)
+            if(slowo[i]!=slowo[licznik-i])
+                nie++;
+        if(nie>0)
+            System.out.print("NIE");
+        else
+            System.out.print("TAK");
+    }
+}

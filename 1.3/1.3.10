@@ -1,0 +1,32 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class main {
+    public static void main(String args[]) throws IOException {
+        Scanner in = new Scanner(System.in);
+        String tekst = in.nextLine();
+        boolean[] lista = new boolean[26];
+        int index = 0;
+        int flaga = 1;
+        
+        for (int i = 0; i < tekst.length(); i++) {
+             if ( tekst.charAt(i) >= 'A' && tekst.charAt(i) <= 'Z') {
+                index = tekst.charAt(i) - 'A'; 
+             }else if( tekst.charAt(i) >= 'a' &&  tekst.charAt(i) <= 'z') {
+                index = tekst.charAt(i) - 'a'; 
+             }
+          
+         lista[index] = true; 
+        }
+      for (int i = 0; i <= 25; i++){
+          
+         if (lista[i] == false)
+            flaga = 0;
+      }
+        if(flaga == 1)
+            System.out.print("true");
+        else
+            System.out.print("false");
+    }
+}

@@ -1,0 +1,34 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class test {
+    public static void main(String args[]) throws IOException {
+        Scanner in = new Scanner(System.in);
+        int[][] tab = new int[100][100];
+        int a = in.nextInt();
+        int b = in.nextInt();
+
+        if(b<=0 || b>99) {
+            System.out.println("BŁĄD");
+        }
+        else if(a<=0 || b>99){
+            System.out.println("BŁĄD");
+        }
+        else{
+            for(int i = 0; i < a; i++){
+                for(int j = 0; j < b; j++){
+                    tab[i][j] = in.nextInt();
+                }
+            }
+            for(int i = 0; i < a; i++) {
+                for (int j = 0; j < b; j++) {
+                    System.out.print(tab[i][j]);
+                    if(j<b-1)
+                        System.out.print(" ");
+                }
+                System.out.println();
+            }
+        }
+    }
+}

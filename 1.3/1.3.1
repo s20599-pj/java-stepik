@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+
+class test{
+    public static void main(String args[]){
+        int a;
+
+        Scanner in = new Scanner(System.in);
+        a = in.nextInt();
+        if(a>0) {
+            for (int i = 1; i <= a; i++) {
+                System.out.print(i);
+                if (i == a)
+                    System.out.println();
+                else
+                    System.out.print(" ");
+            }
+            for (int i = 1; i <= a; i++) {
+                double b = Math.pow(i, 2);
+                System.out.printf("%.0f", b);
+                if (i == a)
+                    System.out.println();
+                else
+                    System.out.print(" ");
+            }
+        }
+        else
+            System.out.print("BŁĄD");
+    }
+}

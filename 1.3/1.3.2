@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.Scanner;
+
+
+class tak{
+    public static void main(String args[]){
+        int a;
+        int[] tab = new int[100];
+        Scanner in = new Scanner(System.in);
+        a = in.nextInt();
+
+        if(a<=100 && a>0)
+        {
+            for(int i=0; i < a; i++)
+            {
+                int b = in.nextInt();
+                tab[i] = b;
+            }
+            for(int i=0; i < a; i++)
+            {
+                System.out.print(tab[i]);
+                if (i == a-1)
+                    System.out.println();
+                else
+                    System.out.print(" ");
+            }
+        }
+        else
+            System.out.print("BŁĄD");
+    }
+}

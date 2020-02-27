@@ -1,0 +1,39 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class main {
+    public static void main(String args[]) throws IOException {
+        Scanner in = new Scanner(System.in);
+        final double Ziemia = 31557600;
+
+        double sekundy = in.nextDouble();
+        String planeta = in.next();
+        switch(planeta){
+            case "Ziemia":
+                System.out.printf("%.2f",sekundy/Ziemia);
+                break;
+            case "Merkury":
+                System.out.printf("%.2f",sekundy/(0.2408457*Ziemia));
+                break;
+            case "Wenus":
+                System.out.printf("%.2f",sekundy/(0.61519726*Ziemia));
+                break;
+            case "Mars":
+                System.out.printf("%.2f",sekundy/(1.8808158*Ziemia));
+                break;
+            case "Jowisz":
+                System.out.printf("%.2f",sekundy/(11.862615*Ziemia));
+                break;
+            case "Saturn":
+                System.out.printf("%.2f",sekundy/(29.447498*Ziemia));
+                break;
+            case "Uran":
+                System.out.printf("%.2f",sekundy/(84.016846*Ziemia));
+                break;
+            case "Neptun":
+                System.out.printf("%.2f",sekundy/(164.79132*Ziemia));
+                break;
+        }
+    }
+}
